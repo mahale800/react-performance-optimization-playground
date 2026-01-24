@@ -1,0 +1,195 @@
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #0b0b15;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: flex-start;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  /* Deep cosmic dark gradient */
+  background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #0f0c29 100%);
+}
+
+#root {
+  width: 100%;
+}
+
+.app-container {
+  max-width: 1280px;
+  /* Wider canvas for 10 buttons with nice gaps */
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* Header / Nav Section */
+.nav-section {
+  background: rgba(30, 30, 40, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 1.25rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+}
+
+.nav-bar {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  /* Center by default */
+  flex-wrap: nowrap;
+  /* Single row forced */
+  overflow-x: auto;
+  /* Scroll if needed */
+  white-space: nowrap;
+  /* No wrapping of text */
+  width: 100%;
+  padding-bottom: 4px;
+  /* Space for hidden scrollbar */
+  scrollbar-width: none;
+  /* Hide scrollbar Firefox */
+  -ms-overflow-style: none;
+  /* Hide scrollbar IE */
+}
+
+.nav-bar::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar Chrome/Safari */
+}
+
+.lab-loop {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #a0a0b0;
+  font-family: monospace;
+  opacity: 0.8;
+}
+
+/* Buttons */
+button {
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.65rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #c0c0d0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  /* Accessibilty safe min-height */
+  height: auto;
+  padding: 0.6rem 1.2rem;
+  /* Safer horizontal padding */
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+button.active {
+  background-color: #6d28d9;
+  /* Deep Purple */
+  color: white;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 15px rgba(109, 40, 217, 0.5);
+}
+
+/* Card / Content Container */
+.primary-action-button {
+  background-color: #6d28d9;
+  border: 1px solid #7c3aed;
+  color: white;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  /* Inherits global button props: height: 2.5rem, padding, radius */
+}
+
+.primary-action-button:hover {
+  background-color: #5b21b6;
+  border-color: #6d28d9;
+  box-shadow: 0 0 15px rgba(109, 40, 217, 0.4);
+}
+
+.view-container {
+  background: rgba(20, 20, 25, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem 3rem;
+  /* Wider horizontal padding for balance */
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 400px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Search Input Styling */
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  background-color: rgba(30, 30, 40, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #8b5cf6;
+  /* Purple highlight */
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.3);
+  background-color: rgba(30, 30, 40, 0.8);
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Control Row Standardization */
+.control-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* Consistent gap between button and counters */
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
