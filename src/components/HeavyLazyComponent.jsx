@@ -1,6 +1,4 @@
 
-import { useEffect } from 'react';
-
 const HeavyLazyComponent = () => {
     // Simulate initial delay to force Fallback UI visibility
     // Note: In a real app the delay comes from the network request
@@ -21,3 +19,4 @@ const HeavyLazyComponent = () => {
 };
 
 export default HeavyLazyComponent;
+
